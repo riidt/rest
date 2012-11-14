@@ -1,0 +1,44 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<script type="text/javascript" src="js/jquery-1.8.2.min.js"></script> 
+<script type="text/javascript" src="js/rest.js"></script>
+<script type="text/javascript">
+	function init()
+	{
+		$("#s1").click(function(){
+			riidt.debug($("#restID").val(), $("#restKey").val(), $("#restName").val());
+		});
+		
+		$("#s2").click(function(){
+			riidt.getApp($("#restID").val());
+		});
+	}
+</script>
+</head>
+<body onload="init()">
+<table>
+	<tr>
+		<td>id:</td>
+		<td><input id="restID" value="1"></td>
+	</tr>
+	<tr>
+		<td>key:</td>
+		<td><input id="restKey" value="adfwefsf23234werr234"></td>
+	</tr>
+	<tr>
+		<td>Name:</td>
+		<td><input id="restName" value="test"></td>
+	</tr>
+	<tr>
+		<td colspan="2"><input id="s1" type="button" value="Submit"></td>
+	</tr>
+	<tr>
+		<td colspan="2"><input id="s2" type="button" value="getApp"></td>
+	</tr>
+	<tr>
+		<td colspan="2"><div id="out"></div></td>
+	</tr>
+</table>
+</body>
+</html>
