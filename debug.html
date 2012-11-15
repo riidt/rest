@@ -7,11 +7,19 @@
 	function init()
 	{
 		$("#s1").click(function(){
-			riidt.debug($("#restID").val(), $("#restKey").val(), $("#restName").val());
+			riidt.read($("#restID").val(), $("#restKey").val(), $("#restName").val());
 		});
 		
 		$("#s2").click(function(){
 			riidt.getApp($("#restID").val());
+		});
+		
+		$("#s3").click(function(){
+			riidt.createApp($("#restName").val());
+		});
+		
+		$("#s4").click(function(){
+			riidt.write($("#restID").val(), $("#restKey").val(), $("#restName").val(),$("#content").val());
 		});
 	}
 </script>
@@ -31,10 +39,20 @@
 		<td><input id="restName" value="test"></td>
 	</tr>
 	<tr>
-		<td colspan="2"><input id="s1" type="button" value="Submit"></td>
+		<td>Content:</td>
+		<td><input id="content" value=""></td>
+	</tr>
+	<tr>
+		<td colspan="2"><input id="s1" type="button" value="read"></td>
+	</tr>
+	<tr>
+		<td colspan="2"><input id="s4" type="button" value="write"></td>
 	</tr>
 	<tr>
 		<td colspan="2"><input id="s2" type="button" value="getApp"></td>
+	</tr>
+	<tr>
+		<td colspan="2"><input id="s3" type="button" value="newApp"></td>
 	</tr>
 	<tr>
 		<td colspan="2"><div id="out"></div></td>

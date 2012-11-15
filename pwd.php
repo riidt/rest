@@ -3,8 +3,6 @@ if(!defined('REST')) {
 	exit('Access Denied');
 }
 
-include_once("response.php");
-
 class PWD
 {
 	private $dbfile = "db.dat";
