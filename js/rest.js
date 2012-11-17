@@ -1,7 +1,7 @@
 var riidt = (function(ver)
 {
-	var host = "http://localhost/riidt/";
-	//var host = "http://www.riidt.com/";
+	//var host = "http://localhost/riidt/";
+	var host = "http://www.riidt.com/";
 	var read = function(id, key, name)
 	{
 		param = {};

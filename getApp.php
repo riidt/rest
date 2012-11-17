@@ -4,7 +4,7 @@
 		exit('Access Denied');
 	}
 
-include_once("response.php");
+include_once("class_response.php");
 include_once("config_common.php");
 include_once("config_sql.php");
 

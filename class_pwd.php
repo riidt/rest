@@ -19,7 +19,11 @@ class PWD
 		if(@file_exists($this->dbfile))
 		{
 			$handle = fopen($this->dbfile, "r");
-			$contents = fread($handle, filesize ($this->dbfile));
+			$size = filesize ($this->dbfile);
+			if($size)
+				$contents = fread($handle, $size);
+			else
+				$contents = "";
 			fclose($handle);
 
 			$this->response->status = 200;
